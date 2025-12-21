@@ -1,0 +1,25 @@
+class Solution {
+    public char findTheDifference(String s, String t) {
+        
+        int s1 = 0;
+        int s2 = 0;
+    
+        for(char i=0; i<s.length(); i++){
+            s1 += s.charAt(i);
+        }
+
+        for(char i=0; i<t.length(); i++){
+            s2 += t.charAt(i);
+        }
+        int n = 0;
+        
+        if(s1>s2){
+             n = s1-s2;
+            return (char)n;
+        }else if(s1<s2){
+             n = s2-s1;
+            return (char)n;
+        }
+        return ' ';
+    }
+}
